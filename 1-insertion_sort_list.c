@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
- * insertion_sort_list - 
+ * insertion_sort_list - sorts a doubly linked list
  *
- * @list:
+ * @list: double pointer to the linked list
  */
 void insertion_sort_list(listint_t **list)
 {
@@ -11,7 +11,7 @@ void insertion_sort_list(listint_t **list)
 	/* Validate */
 	if (!list || !*list)
 		return;
-	
+
 	_list = *list;
 	/* Move Forward */
 	while (_list && _list->next)
@@ -27,7 +27,7 @@ void insertion_sort_list(listint_t **list)
 			{
 				swap = _list;
 				/* Move little numbers to the left */
-				if((swap->n) < (swap->prev->n))
+				if ((swap->n) < (swap->prev->n))
 				{
 					node_swap(_list->prev, swap, list);
 				} else
@@ -41,14 +41,13 @@ void insertion_sort_list(listint_t **list)
 		{
 			_list = _list->next;
 		}
-		
 	}
 }
 /**
- * node_swap - 
- * @left:
- * @right:
- * @list:
+ * node_swap - Swap nodes from linked list
+ * @left: variable to be check
+ * @right: variable to be check
+ * @list: variable to be check
  */
 void node_swap(listint_t *left, listint_t *right, listint_t **list)
 {
@@ -67,7 +66,7 @@ void node_swap(listint_t *left, listint_t *right, listint_t **list)
 	left->next = right->next;
 	right->next = left;
 
-	if(left->next)
+	if (left->next)
 		left->next->prev = left;
 
 	print_list(*list);
