@@ -16,7 +16,9 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
-
+/**
+ * - - - - - PROTOTYPES - - - - - -
+ */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
@@ -28,5 +30,7 @@ void shell_sort(int *array, size_t size);
 
 void node_swap(listint_t *left, listint_t *right, listint_t **list);
 void item_swap(int *a, int *b);
+int partition(int *array, size_t size, int n_min, int n_max);
+void quickS(int *array, int low, int high, size_t size);
 
 #endif
