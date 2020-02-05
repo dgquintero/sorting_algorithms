@@ -7,7 +7,7 @@ An introductory repository on:
 - Ubutuntu 14.04
 - gcc 4.8.4
 ## File Descriptions
-**[sort.h](sort.h)** - Header file containing the prototypes of almost all functions and the definition of type `listint_t`.
+**[sort.h](sort.h)** - Header file containing the prototypes of all functions and the structure of type `listint_t`.
 **[print_array.c](print_array.c)** - Function that prints an array.
 
 **[print_list.c](print_list.c)** - Function that prints a list.
